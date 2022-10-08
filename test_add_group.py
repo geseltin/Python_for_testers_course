@@ -22,7 +22,7 @@ class TestAddGroup(unittest.TestCase):
         # Открыть страницу групп
         self.open_groups_page(wd)
         # Создать группу
-        self.create_group(wd, Group(name='123', header='678', footer='345'))
+        self.create_group(wd, Group())
         # Вернуться на страницу групп
         self.return_to_groups_page(wd)
         # Разлогиниться
