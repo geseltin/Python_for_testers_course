@@ -7,9 +7,10 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
 
+
 class TestAddGroup(unittest.TestCase):
     def setUp(self):
-        self.wd = webdriver.Chrome(executable_path=r'')
+        self.wd = webdriver.Chrome()
         self.wd.implicitly_wait(30)
 
     
@@ -48,6 +49,7 @@ class TestAddGroup(unittest.TestCase):
     
     def tearDown(self):
         self.wd.quit()
+
 
 if __name__ == "__main__":
     unittest.main()
