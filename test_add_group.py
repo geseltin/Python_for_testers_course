@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import Select
+
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
+from  model.group import Group
 
 
 class TestAddGroup(unittest.TestCase):
@@ -16,26 +15,65 @@ class TestAddGroup(unittest.TestCase):
     
     def test_add_group(self):
         wd = self.wd
-        wd.get("http://localhost/addressbook/")
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
-        wd.find_element_by_xpath("//input[@value='Login']").click()
-        wd.find_element_by_link_text("groups").click()
+        # Открыть страницу логина
+        self.open_home_page(wd)
+        # Авторизоваться под администратором
+        self.login(wd, 'admin', 'secret')
+        # Открыть страницу групп
+        self.open_groups_page(wd)
+        # Создать группу
+        self.create_group(wd, Group(name='123', header='678', footer='345'))
+        # Вернуться на страницу групп
+        self.return_to_groups_page(wd)
+        # Разлогиниться
+        self.logout(wd)
+
+    def test_add_empty_group(self):
+        wd = self.wd
+        # Открыть страницу логина
+        self.open_home_page(wd)
+        # Авторизоваться под администратором
+        self.login(wd, 'admin', 'secret')
+        # Открыть страницу групп
+        self.open_groups_page(wd)
+        # Создать группу c пустыми значениями
+        self.create_group(wd, Group(name='', header='', footer=''))
+        # Вернуться на страницу групп
+        self.return_to_groups_page(wd)
+        # Разлогиниться
+        self.logout(wd)
+
+    def logout(self, wd):
+        wd.find_element_by_link_text("Logout").click()
+
+    def return_to_groups_page(self, wd):
+        wd.find_element_by_link_text("group page").click()
+
+    def create_group(self, wd, group):
         wd.find_element_by_name("new").click()
         wd.find_element_by_id("content").click()
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys("New recorded group")
+        wd.find_element_by_name("group_name").send_keys(group.name)
         wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys("New recorded group")
+        wd.find_element_by_name("group_header").send_keys(group.header)
         wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys("New recorded group")
+        wd.find_element_by_name("group_footer").send_keys(group.footer)
         wd.find_element_by_name("submit").click()
-        wd.find_element_by_link_text("group page").click()
-        wd.find_element_by_link_text("Logout").click()
-    
+
+    def open_groups_page(self, wd):
+        wd.find_element_by_link_text("groups").click()
+
+    def login(self, wd, username, password):
+        wd.find_element_by_name("user").clear()
+        wd.find_element_by_name("user").send_keys(username)
+        wd.find_element_by_name("pass").clear()
+        wd.find_element_by_name("pass").send_keys(password)
+        wd.find_element_by_xpath("//input[@value='Login']").click()
+
+    def open_home_page(self, wd):
+        wd.get("http://localhost/addressbook/")
+
     def is_element_present(self, how, what):
         try: self.wd.find_element(by=how, value=what)
         except NoSuchElementException as e: return False
