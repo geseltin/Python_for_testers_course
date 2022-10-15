@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from fixture.session import SessionHelper
+from fixture.group import GroupHelper
 
 
 class Application:
@@ -8,32 +9,10 @@ class Application:
         self.wd = webdriver.Chrome()
         self.wd.implicitly_wait(30)
         self.session = SessionHelper(self)
+        self.group = GroupHelper(self)
 
 
-    def return_to_groups_page(self):
-        wd = self.wd
-        wd.find_element_by_link_text("group page").click()
 
-    def create_group(self, group):
-        wd = self.wd
-        # Открыть страницу групп
-        self.open_groups_page()
-        wd.find_element_by_name("new").click()
-        wd.find_element_by_id("content").click()
-        wd.find_element_by_name("group_name").click()
-        wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys(group.name)
-        wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys(group.header)
-        wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys(group.footer)
-        wd.find_element_by_name("submit").click()
-        # Вернуться на страницу групп
-        self.return_to_groups_page()
-
-    def open_groups_page(self):
-        wd = self.wd
-        wd.find_element_by_link_text("groups").click()
 
     def login(self, username, password):
         wd = self.wd
