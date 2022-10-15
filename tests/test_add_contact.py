@@ -3,7 +3,7 @@
 import pytest
 
 from model.contact import Contact
-from application import Application
+from fixture.application import Application
 
 
 @pytest.fixture
@@ -15,11 +15,11 @@ def app(request):
 
 def test_add_user(app):
     # Авторизоваться под УЗ администратора
-    app.login('admin', 'secret')
+    app.session.login('admin', 'secret')
     # Добавить новый контакт
     app.add_new_contact(Contact())
     # Разлогиниться
-    app.logout()
+    app.session.logout()
 
 
 
