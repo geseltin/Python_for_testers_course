@@ -16,20 +16,20 @@ def app(request):
 
 def test_add_group(app):
     # Авторизоваться под администратором
-    app.session.login('admin', 'secret')
+    app.factory.session.login('admin', 'secret')
     # Создать группу
-    app.group.create(Group())
+    app.factory.group.create(Group())
     # Разлогиниться
-    app.session.logout()
+    app.factory.session.logout()
 
 
 def test_add_empty_group(app):
 
     # Авторизоваться под администратором
-    app.session.login('admin', 'secret')
+    app.factory.session.login('admin', 'secret')
     # Открыть страницу групп
-    app.group.create(Group(name=' ', header=' ', footer=' '))
+    app.factory.group.create(Group(name=' ', header=' ', footer=' '))
     # Разлогиниться
-    app.session.logout()
+    app.factory.session.logout()
 
 

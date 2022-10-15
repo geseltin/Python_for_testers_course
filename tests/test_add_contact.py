@@ -15,11 +15,11 @@ def app(request):
 
 def test_add_user(app):
     # Авторизоваться под УЗ администратора
-    app.session.login('admin', 'secret')
+    app.factory.session.login('admin', 'secret')
     # Добавить новый контакт
-    app.add_new_contact(Contact())
+    app.factory.contact.add_new(Contact())
     # Разлогиниться
-    app.session.logout()
+    app.factory.session.logout()
 
 
 
