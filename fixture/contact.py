@@ -63,6 +63,20 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
 
+    def edit_contact(self, contact):
+        wd = self.app.wd
+        xpath = f'//td[contains(text(), "{contact.last_name[0]}")]/..//a[contains(@href, "edit")]'
+        wd.find_element_by_xpath(xpath).click()
+        wd.find_element_by_name('address').send_keys('Test edit contact')
+        wd.find_element_by_name('update').click()
+
+    def delete_contact(self, contact):
+        wd = self.app.wd
+        xpath = f'//td[contains(text(), "{contact.last_name[0]}")]/..//a[contains(@href, "edit")]'
+        wd.find_element_by_xpath(xpath).click()
+        wd.find_element_by_xpath('//input[@value="Delete"]').click()
+
+
     def open_contact_creation_form(self):
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()

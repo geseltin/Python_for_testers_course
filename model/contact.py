@@ -1,7 +1,6 @@
 import random
 
 
-
 class Contact:
 
     def __init__(self, first_name=None, mid_name=None, last_name=None, nickname=None, title=None, company=None,
@@ -27,6 +26,7 @@ class Contact:
         self.byear = birth_year
 
     def generate_data(self):
-        data = ''.join(random.choices('ABCDEFGHIJKLMOPQRSTUVWXYZ', k=8))
+        data = 'Contact'
+        for i in range(8):
+            data += random.choice('ABCDEFGHIJKLMOPQRSTUVWXYZ')
         return data
-
