@@ -15,8 +15,6 @@ class Application:
         self.contact = ContactHelper(self)
 
 
-
-
     def login(self, username, password):
         wd = self.wd
         # Открыть страницу логина
