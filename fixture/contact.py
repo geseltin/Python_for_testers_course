@@ -63,13 +63,6 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
 
-    def edit_contact(self, contact):
-        wd = self.app.wd
-        xpath = f'//td[contains(text(), "{contact.last_name}")]/..//a[contains(@href, "edit")]'
-        wd.find_element_by_xpath(xpath).click()
-        wd.find_element_by_name('address').send_keys('Test edit contact')
-        wd.find_element_by_name('update').click()
-
     def edit_first(self, contact):
         wd = self.app.wd
         self.app.open_home_page()
