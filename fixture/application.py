@@ -3,14 +3,13 @@ from selenium import webdriver
 from fixture.session import SessionHelper
 from fixture.group import GroupHelper
 from fixture.contact import ContactHelper
-from fixture.factory import Factory
+
 
 
 class Application:
     def __init__(self):
         self.wd = webdriver.Chrome()
         self.wd.implicitly_wait(30)
-        self.factory= Factory(self)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)
