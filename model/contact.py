@@ -5,7 +5,7 @@ class Contact:
 
     def __init__(self, first_name=None, mid_name=None, last_name=None, nickname=None, title=None, company=None,
                  address=None, phone_home=None, phone_mobile=None, phone_work=None, phone_fax=None, email1=None,
-                 email2=None, email3=None, homepage=None, birth_day=None, birth_month=None, birth_year=None):
+                 email2=None, email3=None, homepage=None, birth_day='5', birth_month='January', birth_year='1990'):
         self.first_name = first_name or self.generate_data()
         self.mid_name = mid_name or self.generate_data()
         self.last_name = last_name or self.generate_data()
