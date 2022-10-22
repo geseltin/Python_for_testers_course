@@ -82,10 +82,13 @@ class ContactHelper:
         xpath = f'//input[@name="selected[]"]/../..//a[contains(@href, "edit")]'
         wd.find_element_by_xpath(xpath).click()
         wd.find_element_by_xpath('//input[@value="Delete"]').click()
+        self.app.open_home_page()
 
-
-
-
+    def count(self):
+        wd = self.app.wd
+        self.app.open_home_page()
+        length = len(wd.find_elements_by_name("selected[]"))
+        return length
 
     def open_contact_creation_form(self):
         wd = self.app.wd
