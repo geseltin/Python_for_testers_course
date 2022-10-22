@@ -92,4 +92,5 @@ class ContactHelper:
 
     def open_contact_creation_form(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("add new").click()
+        if not wd.current_url.endswith("/edit.php"):
+            wd.find_element_by_link_text("add new").click()
