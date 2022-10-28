@@ -1,11 +1,13 @@
 import random
+from sys import maxsize
 
 
 class Contact:
 
-    def __init__(self, first_name=None, mid_name=None, last_name=None, nickname=None, title=None, company=None,
+    def __init__(self, id=None, first_name=None, mid_name=None, last_name=None, nickname=None, title=None, company=None,
                  address=None, phone_home=None, phone_mobile=None, phone_work=None, phone_fax=None, email1=None,
                  email2=None, email3=None, homepage=None, birth_day='5', birth_month='January', birth_year='1990'):
+        self.id = id
         self.first_name = first_name or self.generate_data()
         self.mid_name = mid_name or self.generate_data()
         self.last_name = last_name or self.generate_data()
@@ -30,3 +32,18 @@ class Contact:
         for i in range(8):
             data += random.choice('ABCDEFGHIJKLMOPQRSTUVWXYZ')
         return data
+
+    def __eq__(self, other):
+        return (self.id is None or other.id is None or self.id == other.id) and \
+               self.name == other.name
+
+    def __repr__(self):
+        return f'{self.id}, {self.first_name}, {self.last_name}'
+
+    def id_or_max(self):
+        if self.id:
+            return int(self.id)
+        else:
+            return maxsize
+
+

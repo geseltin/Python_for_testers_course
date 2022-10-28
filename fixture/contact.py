@@ -1,4 +1,5 @@
 from selenium.webdriver.support.ui import Select
+from model.contact import Contact
 
 class ContactHelper:
 
@@ -94,3 +95,14 @@ class ContactHelper:
         wd = self.app.wd
         if not wd.current_url.endswith("/edit.php"):
             wd.find_element_by_link_text("add new").click()
+
+    def get_contact_list(self):
+        wd = self.app.wd
+        self.app.open_home_page()
+        contact_list = []
+        for element in wd.find_elements_by_xpath("//*[@name='entry']"):
+            last_name = element.find_element_by_xpath("//*[@name='entry']/td[2]").text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            first_name = element.find_element_by_xpath("//*[@name='entry']/td[3]").text
+            contact_list.append(Contact(id=id, last_name=last_name, first_name=first_name))
+        return contact_list
