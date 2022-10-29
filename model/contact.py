@@ -8,10 +8,10 @@ class Contact:
                  address=None, phone_home=None, phone_mobile=None, phone_work=None, phone_fax=None, email1=None,
                  email2=None, email3=None, homepage=None, birth_day='5', birth_month='January', birth_year='1990'):
         self.id = id
-        self.first_name = first_name or self.generate_data()
-        self.mid_name = mid_name or self.generate_data()
-        self.last_name = last_name or self.generate_data()
-        self.nickname = nickname or self.generate_data()
+        self.first_name = first_name # or self.generate_data()
+        self.mid_name = mid_name # or self.generate_data()
+        self.last_name = last_name # or self.generate_data()
+        self.nickname = nickname # or self.generate_data()
         self.title = title or ''
         self.company = company or ''
         self.address = address or ''
@@ -35,7 +35,7 @@ class Contact:
 
     def __eq__(self, other):
         return (self.id is None or other.id is None or self.id == other.id) and \
-               self.name == other.name
+               self.last_name == other.last_name and self.first_name == other.first_name
 
     def __repr__(self):
         return f'{self.id}, {self.first_name}, {self.last_name}'
