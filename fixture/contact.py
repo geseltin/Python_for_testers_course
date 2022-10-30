@@ -113,9 +113,7 @@ class ContactHelper:
         wd = self.app.wd
         self.app.open_home_page()
         self.edit_contact_by_index(0)
-
         self.fill_contact_form(contact, wd)
-
         wd.find_element_by_name('update').click()
         self.contact_list_cache = None
 
