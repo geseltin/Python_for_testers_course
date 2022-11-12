@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8fa407f2-7878-4aad-9296-c8a8b4136390" name="Changes" comment="Добавлена загрузка данных из конфигурационного файла">
+      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/contacts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/groups.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generator/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generator/contact.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generator/group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_add_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_add_group.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/git_commit.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/test_add_group.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FqjUSGgVsZHW87nIYfdnO3SQKo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alexander\PycharmProjects\Python_for_testers_course" />
+      <recent name="C:\Users\Alexander\PycharmProjects\Python_for_testers_course\tests" />
+      <recent name="C:\Users\Alexander\PycharmProjects\Python_for_testers_course\fixture" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.group">
+    <configuration name="contact" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_for_testers_course" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generator/contact.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="group" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_for_testers_course" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generator/group.py" />
+      <option name="PARAMETERS" value="-f data/groups.json" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_add_contact.test_add_contact" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python_for_testers_course" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_add_contact.test_add_contact&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_add_group.test_add_group" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python_for_testers_course" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_add_group.test_add_group&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_add_group.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python_for_testers_course" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_add_group.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.contact" />
+      <item itemvalue="Python.group" />
+      <item itemvalue="Python tests.Python tests in test_add_group.py" />
+      <item itemvalue="Python tests.Python tests for test_add_contact.test_add_contact" />
+      <item itemvalue="Python tests.Python tests for test_add_group.test_add_group" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.group" />
+        <item itemvalue="Python tests.Python tests for test_add_contact.test_add_contact" />
+        <item itemvalue="Python tests.Python tests for test_add_group.test_add_group" />
+        <item itemvalue="Python.contact" />
+        <item itemvalue="Python tests.Python tests in test_add_group.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fa407f2-7878-4aad-9296-c8a8b4136390" name="Changes" comment="" />
+      <created>1665226523929</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665226523929</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1665226862933</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665226862933</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First test">
+      <created>1665229939948</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665229939948</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed launch">
+      <created>1665238478829</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665238478829</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Добавлен класс группа и рефакторинг на основе класса">
+      <created>1665242517554</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665242517554</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Добавлено генерирование данных для объекта Group">
+      <created>1665254668935</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665254668935</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Добавлен тест по добавлению контакта и класс Contact">
+      <created>1665261141985</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665261141985</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Добавлен модуль application&#10;Тесты переведены на использование фреймворка pytest">
+      <created>1665816050838</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665816050838</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Декомпозированы классы&#10;Добавлен класс SessionHelper">
+      <created>1665822861968</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665822861968</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Добавлен класс groupHelper &#10;Небольшие правки">
+      <created>1665823882605</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665823882605</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Добавлен класс Factory&#10;Рефакторинг с учетом нового класса">
+      <created>1665828748240</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665828748240</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Фикстура вынесена в модуль conftest">
+      <created>1665841411059</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665841411059</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Добавлены тесты на удаление и редактирование контактов&#10;Добавлен тест на редактирование группы&#10;Добавлены соответствующие методы">
+      <created>1665902251016</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665902251016</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Удалён класс factory и проведен рефакторинг">
+      <created>1665985732673</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665985732673</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Изменены тесты на редактирование и удаление контакта (теперь изменяется и удаляется первый контакт в списке)&#10;В тестовые методы добавлены переходы на главные страницы">
+      <created>1666000722385</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1666000722385</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Удален метод edit_contact как неактуальный">
+      <created>1666023055759</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1666023055759</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Заполнение карточки контакта вынесено в отдельную функцию">
+      <created>1666255298901</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1666255298901</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Добавлены проверки валидности фикстуры&#10;Добавлена проверка текущего состояния сессии">
+      <created>1666373172754</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1666373172754</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Добавлены проверки предусловий на наличие объекта для тестов Group и Contact">
+      <created>1666424727564</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1666424727564</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Добавлены проверки на длинну списков в тесты для групп">
+      <created>1666973752648</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1666973752648</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Добавлены проверки для тестов контактов">
+      <created>1666982645171</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1666982645171</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Испралвена проверка списков">
+      <created>1667029365115</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1667029365115</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Исправлены проверки на сравнение списков">
+      <created>1667037002207</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667037002207</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Тесты изменены на случайное удаление/изменение групп/контактов">
+      <created>1667055807134</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1667055807134</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Исправлен тест добавления контакта (генерация входных данных)">
+      <created>1667112313064</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1667112313064</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Добавлено кэширование и методы для работы с группами/контактами по индексу">
+      <created>1667114290447</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1667114290447</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Добавлен тест на сравнение данных контакта на главной странице и странице редактирования и дополнительные для этого методы">
+      <created>1667561296390</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1667561296391</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Добавлена параметризация для теста на создание контакта">
+      <created>1667568491117</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1667568491117</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Добавлена параметризация из консоли на запуск в различных браузерах, и различных ссылках">
+      <created>1667573048302</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1667573048302</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Добавлена загрузка данных из конфигурационного файла">
+      <created>1668182185816</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1668182185816</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Добавлено генерирование данных для объекта Group" />
+    <MESSAGE value="Добавлен тест по добавлению контакта и класс Contact" />
+    <MESSAGE value="Добавлен модуль application&#10;Тесты переведены на использование фреймворка pytest" />
+    <MESSAGE value="Декомпозированы классы&#10;Добавлен класс SessionHelper" />
+    <MESSAGE value="Добавлен класс groupHelper &#10;Небольшие правки" />
+    <MESSAGE value="Добавлен класс Factory&#10;Рефакторинг с учетом нового класса" />
+    <MESSAGE value="Фикстура вынесена в модуль conftest" />
+    <MESSAGE value="Добавлены тесты на удаление и редактирование контактов&#10;Добавлен тест на редактирование группы&#10;Добавлены соответствующие методы" />
+    <MESSAGE value="Удалён класс factory и проведен рефакторинг" />
+    <MESSAGE value="Изменены тесты на редактирование и удаление контакта (теперь изменяется и удаляется первый контакт в списке)&#10;В тестовые методы добавлены переходы на главные страницы" />
+    <MESSAGE value="Удален метод edit_contact как неактуальный" />
+    <MESSAGE value="Заполнение карточки контакта вынесено в отдельную функцию" />
+    <MESSAGE value="Добавлены проверки валидности фикстуры&#10;Добавлена проверка текущего состояния сессии" />
+    <MESSAGE value="Добавлены проверки предусловий на наличие объекта для тестов Group и Contact" />
+    <MESSAGE value="Добавлены проверки на длинну списков в тесты для групп" />
+    <MESSAGE value="Добавлены проверки для тестов контактов" />
+    <MESSAGE value="Испралвена проверка списков" />
+    <MESSAGE value="Исправлены проверки на сравнение списков" />
+    <MESSAGE value="Тесты изменены на случайное удаление/изменение групп/контактов" />
+    <MESSAGE value="Исправлен тест добавления контакта (генерация входных данных)" />
+    <MESSAGE value="Добавлено кэширование и методы для работы с группами/контактами по индексу" />
+    <MESSAGE value="Добавлен тест на сравнение данных контакта на главной странице и странице редактирования и дополнительные для этого методы" />
+    <MESSAGE value="Добавлена параметризация для теста на создание контакта" />
+    <MESSAGE value="Добавлена параметризация из консоли на запуск в различных браузерах, и различных ссылках" />
+    <MESSAGE value="Добавлена загрузка данных из конфигурационного файла" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена загрузка данных из конфигурационного файла" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_delete_random_contact.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_modify_random_contact.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_modify_random_contact.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_check_random_contact_data.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
