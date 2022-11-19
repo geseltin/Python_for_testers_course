@@ -12,7 +12,7 @@ except:
     getopt.usage()
     sys.exit(2)
 
-n = 2
+n = 5
 file = "data/groups.json"
 
 for o, a in opts:

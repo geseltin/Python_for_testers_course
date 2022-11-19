@@ -96,10 +96,27 @@ class ContactHelper:
         wd.find_element_by_name('update').click()
         self.contact_list_cache = None
 
+    def modify_random(self, contact):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.open_contact_modify_form_by_id(contact.id)
+        self.fill_contact_form(contact, wd)
+        wd.find_element_by_name('update').click()
+        self.contact_list_cache = None
+
+
     def delete_contact_by_index(self, index):
         wd = self.app.wd
         self.app.open_home_page()
         self.open_contact_modify_form_by_index(index)
+        wd.find_element_by_xpath('//input[@value="Delete"]').click()
+        self.app.open_home_page()
+        self.contact_list_cache = None
+
+    def delete_by_id(self, id):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.open_contact_modify_form_by_id(id)
         wd.find_element_by_xpath('//input[@value="Delete"]').click()
         self.app.open_home_page()
         self.contact_list_cache = None
@@ -109,6 +126,13 @@ class ContactHelper:
         wd = self.app.wd
         xpath = f'//input[@name="selected[]"]/../..//a[contains(@href, "edit")]'
         wd.find_elements_by_xpath(xpath)[index].click()
+
+
+    def open_contact_modify_form_by_id(self, id):
+        wd = self.app.wd
+        xpath = f'//a[@href="edit.php?id={id}"]'
+        wd.find_element_by_xpath(xpath).click()
+
 
     def edit_first(self, contact):
         wd = self.app.wd
