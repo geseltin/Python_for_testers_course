@@ -22,6 +22,13 @@ class OrmFixture:
         id = PrimaryKey(int, column='id')
         first_name = Optional(str, column='firstname')
         last_name = Optional(str, column='lastname')
+        address = Optional(str, column='address')
+        email1 = Optional(str, column='email')
+        email2 = Optional(str, column='email2')
+        email3 = Optional(str, column='email3')
+        phone_home = Optional(str, column='home')
+        phone_mobile = Optional(str, column='mobile')
+        phone_work = Optional(str, column='work')
         deprecated = Optional(datetime, column='deprecated')
         groups = Set(lambda: OrmFixture.ORMGroup, table="address_in_groups",
                      column="group_id", reverse="contacts", lazy=True)
@@ -40,7 +47,10 @@ class OrmFixture:
 
     def convert_contacts_to_model(self, contacts):
         def convert(contact):
-            return Contact(id=str(contact.id), first_name=contact.first_name, last_name=contact.last_name)
+            return Contact(id=str(contact.id), first_name=contact.first_name, last_name=contact.last_name,
+                           address=contact.address, email1=contact.email1, email2=contact.email2, email3=contact.email3,
+                           phone_home=contact.phone_home, phone_mobile=contact.phone_mobile,
+                           phone_work=contact.phone_work)
         return list(map(convert, contacts))
 
     @db_session

@@ -229,3 +229,6 @@ class ContactHelper:
         return "\n".join(filter(lambda x: x != '',
                                 filter(lambda x: x is not None,
                                        [contact.email1, contact.email2, contact.email3])))
+
+    def delete_spaces_in_address(self, contact):
+        return ' '.join(contact.address.split())

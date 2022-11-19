@@ -9,7 +9,7 @@ db = OrmFixture(host='127.0.0.1',
 
 
 try:
-    list = db.get_contacts_not_in_group(Group(id="278"))
+    list = db.get_contact_list()
     for item in list:
         print(item)
     print(len(list))

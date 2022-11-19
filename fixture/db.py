@@ -27,11 +27,13 @@ class DbFixture:
     def get_contact_list(self):
         contact_list = []
         with self.connection.cursor() as cursor:
-            cursor.execute("SELECT id, firstname,lastname, middlename, company FROM addressbook WHERE deprecated='0000-00-00 00:00:00'")
+            cursor.execute("SELECT id, firstname, lastname, middlename, address, email, email2, email3, home, mobile, work "
+                           "FROM addressbook WHERE deprecated='0000-00-00 00:00:00'")
             for row in cursor:
-                (id, firstname, lastname, middlename, company) = row
+                (id, firstname, lastname, middlename, address, email, email2, email3, home, mobile, work) = row
                 contact_list.append(Contact(id=str(id), first_name=firstname, last_name=lastname, mid_name=middlename,
-                                            company=company))
+                                            address=address, email1=email, email2=email2, email3=email3, phone_home=home,
+                                            phone_mobile=mobile, phone_work=work))
         return contact_list
 
 
