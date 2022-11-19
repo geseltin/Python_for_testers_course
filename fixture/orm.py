@@ -33,6 +33,9 @@ class OrmFixture:
         groups = Set(lambda: OrmFixture.ORMGroup, table="address_in_groups",
                      column="group_id", reverse="contacts", lazy=True)
 
+
+
+
     def __init__(self, host, database, user, password):
         self.db.bind('mysql', host=host, user=user, password=password, database=database)
         self.db.generate_mapping()
@@ -50,7 +53,7 @@ class OrmFixture:
             return Contact(id=str(contact.id), first_name=contact.first_name, last_name=contact.last_name,
                            address=contact.address, email1=contact.email1, email2=contact.email2, email3=contact.email3,
                            phone_home=contact.phone_home, phone_mobile=contact.phone_mobile,
-                           phone_work=contact.phone_work)
+                           phone_work=contact.phone_work, included_in_groups=self.convert_group_set(contact.groups))
         return list(map(convert, contacts))
 
     @db_session
@@ -72,3 +75,29 @@ class OrmFixture:
 
         return self.convert_contacts_to_model(
             select(c for c in OrmFixture.ORMContact if c.deprecated is None and orm_group not in c.groups))
+
+    @db_session
+    def get_contact_with_groups(self):
+        list_orm = list(select(g for g in OrmFixture.ORMGroup))
+        def convert(orm):
+            return orm.contacts
+
+        return list(map(convert, list_orm))
+
+    @db_session
+    def get_contact_included_groups(self):
+        contact_list = self.convert_contacts_to_model(select(c for c in OrmFixture.ORMContact if c.deprecated is None))
+        group_list = []
+        for contact in contact_list:
+            for x in contact.included_in_groups:
+                group_list.append(x)
+        return self.convert_groups_to_model(group_list)
+
+    @db_session
+    def convert_group_set(self, group_set):
+        group_list = []
+        for group in group_set:
+            group_list.append(group)
+        return self.convert_groups_to_model(group_list)
+
+

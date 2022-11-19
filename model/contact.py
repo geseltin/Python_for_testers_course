@@ -8,7 +8,7 @@ class Contact:
     def __init__(self, id=None, first_name=None, mid_name=None, last_name=None, nickname=None, title=None, company=None,
                  address=None, phone_home=None, phone_mobile=None, phone_work=None, phone_fax=None, email1=None,
                  email2=None, email3=None, homepage=None, birth_day='5', birth_month='January', birth_year='1990',
-                 all_phones_from_homepage=None, all_emails_from_homepage=None):
+                 all_phones_from_homepage=None, all_emails_from_homepage=None, included_in_groups=None):
         self.id = id
         self.first_name = first_name # or self.generate_data()
         self.mid_name = mid_name # or self.generate_data()
@@ -30,6 +30,7 @@ class Contact:
         self.byear = birth_year
         self.all_phones_from_homepage = all_phones_from_homepage
         self.all_emails_from_homepage = all_emails_from_homepage
+        self.included_in_groups = included_in_groups
 
 
     def generate_data(self):

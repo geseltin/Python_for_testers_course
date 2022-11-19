@@ -10,9 +10,8 @@ db = OrmFixture(host='127.0.0.1',
 
 try:
     list = db.get_contact_list()
-    for item in list:
-        print(item)
-    print(len(list))
+    for i in list:
+        print(i)
 
 finally:
     pass

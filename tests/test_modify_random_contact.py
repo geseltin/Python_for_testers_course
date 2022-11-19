@@ -7,7 +7,7 @@ import random
 def test_modify_random_contact(app, db, data_contacts):
     contact = data_contacts
     old_contact_list = db.get_contact_list()
-    if old_contact_list == 0:
+    if len(old_contact_list) == 0:
         app.contact.add_new(Contact())
 
     contact.id = random.choice(old_contact_list).id

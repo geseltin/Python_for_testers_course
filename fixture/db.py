@@ -1,6 +1,7 @@
 import pymysql
 from model.group import Group
 from model.contact import Contact
+from fixture.orm import OrmFixture
 
 
 class DbFixture:
@@ -14,6 +15,7 @@ class DbFixture:
                                           password=password,
                                           database=database,
                                           autocommit=True)
+
 
     def get_group_list(self):
         group_list = []
@@ -36,7 +38,10 @@ class DbFixture:
                                             phone_mobile=mobile, phone_work=work))
         return contact_list
 
-
+    def get_adress_in_groups_rows_count(self):
+        with self.connection.cursor() as cursor:
+            rows = cursor.execute("SELECT * FROM address_in_groups")
+            return len(rows)
 
     def destroy(self):
         self.connection.close()

@@ -1,6 +1,7 @@
 from selenium.webdriver.support.ui import Select
 from model.contact import Contact
 import re
+import random
 
 class ContactHelper:
 
@@ -232,3 +233,47 @@ class ContactHelper:
 
     def delete_spaces_in_address(self, contact):
         return ' '.join(contact.address.split())
+
+
+    def add_contact_to_the_group(self, contact, group):
+        self.app.open_home_page()
+        self.select_contact_by_id(contact.id)
+        self.select_group_to_add(group.id)
+        self.push_add_to_group_button()
+
+
+    def select_contact_by_id(self, contact_id):
+        wd = self.app.wd
+        wd.find_element_by_xpath(f"//input[@id='{contact_id}']").click()
+
+    def select_group_to_add(self, group_id):
+        wd = self.app.wd
+        wd.find_element_by_xpath(f"//select[@name='to_group']/option[@value='{group_id}']").click()
+
+    def push_add_to_group_button(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//input[@name='add']").click()
+
+    def remove_contact_from_group(self, contact, group):
+        self.switch_to_group_with_contacts_page(group.id)
+        self.select_contact_by_id(contact.id)
+        self.click_remove_from_group_button()
+
+    def switch_to_group_with_contacts_page(self, group_id):
+        wd = self.app.wd
+        self.app.open_home_page()
+        wd.find_element_by_xpath(f"//select[@name='group']/option[@value='{group_id}']").click()
+
+    def click_remove_from_group_button(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath(f"//input[@name='remove']").click()
+
+    def get_contact_included_in_group_from_list(self, contact_list):
+        for contact in contact_list:
+            if len(contact.included_in_groups) == 0:
+                continue
+            else:
+                contact_for_test = contact
+                break
+        return contact_for_test
+
