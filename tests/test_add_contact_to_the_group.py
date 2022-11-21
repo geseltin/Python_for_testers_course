@@ -2,7 +2,7 @@ import random
 
 
 
-def test_add_contact_to_the_group(app, db, data_contacts, data_groups):
+def test_add_contact_to_the_group(app, db, orm, data_contacts, data_groups):
     # Предусловия, проверяем наличие группы и контакта
     if app.contact.count() == 0:
         contact = data_contacts
@@ -17,7 +17,7 @@ def test_add_contact_to_the_group(app, db, data_contacts, data_groups):
     app.contact.add_contact_to_the_group(contact, group)
 
     # Проверки
-    contacts_in_group = db.get_contacts_in_group(group)
+    contacts_in_group = orm.get_contacts_in_group(group)
     assert contact in contacts_in_group
 
 
