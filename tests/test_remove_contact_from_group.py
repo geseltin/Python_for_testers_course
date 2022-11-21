@@ -4,12 +4,15 @@ import random
 
 def test_remove_contact_from_group(app, db, orm, data_groups, data_contacts):
 
+
     # Предусловия
-    if db.get_adress_in_groups_rows_count == 0:
+    if db.get_adress_in_groups_rows_count() == 0:
         group = data_groups
         contact = data_contacts
         app.group.create(group)
+        group = random.choice(orm.get_group_list())
         app.contact.add_new(contact)
+        contact = random.choice(orm.get_contact_list())
         app.contact.add_contact_to_the_group(contact=contact, group=group)
 
     # Шаги

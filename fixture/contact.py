@@ -269,6 +269,7 @@ class ContactHelper:
         wd.find_element_by_xpath(f"//input[@name='remove']").click()
 
     def get_contact_included_in_group_from_list(self, contact_list):
+        contact_for_test = None
         for contact in contact_list:
             if len(contact.included_in_groups) == 0:
                 continue
