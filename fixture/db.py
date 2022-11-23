@@ -41,7 +41,8 @@ class DbFixture:
     def get_adress_in_groups_rows_count(self):
         with self.connection.cursor() as cursor:
             rows = cursor.execute("SELECT * FROM address_in_groups")
-            return len(rows)
+            return rows
+
 
     def destroy(self):
         self.connection.close()

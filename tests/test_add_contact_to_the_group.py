@@ -3,21 +3,39 @@ import random
 
 
 def test_add_contact_to_the_group(app, db, orm, data_contacts, data_groups):
-    # Предусловия, проверяем наличие группы и контакта
+
+    def get_not_full_group(group_list):
+        for group in group_list:
+            contacts_not_in_group = orm.get_contacts_in_group(group)
+            if contacts_not_in_group is not None:
+                return group
+
+    # Предусловия, проверяем наличие хотя бы одной группы и контакта
+    group = data_groups
     if app.contact.count() == 0:
         contact = data_contacts
         app.contact.add_new(contact)
     if app.group.count() == 0:
-        group = data_groups
         app.group.create(group)
 
+
+    group_list = orm.get_group_list()
+    # Ищем неполную группу, если такой нет - создаём
+
+    group_for_test = get_not_full_group(group_list)
+    if group_for_test is None:
+        app.group.create(group)
+        group_list = orm.get_group_list()
+        group_for_test = get_not_full_group(group_list)
+
+    contact_for_test = random.choice(orm.get_contacts_not_in_group(group_for_test))
+
+
     # Шаги
-    contact = random.choice(db.get_contact_list())
-    group = random.choice(db.get_group_list())
-    app.contact.add_contact_to_the_group(contact, group)
+    app.contact.add_contact_to_the_group(contact_for_test, group_for_test)
 
     # Проверки
-    contacts_in_group = orm.get_contacts_in_group(group)
-    assert contact in contacts_in_group
+    contacts_in_group = orm.get_contacts_in_group(group_for_test)
+    assert contact_for_test in contacts_in_group
 
 
