@@ -79,8 +79,8 @@ class Contact:
                self.last_name == other.last_name and self.first_name == other.first_name
 
     def __repr__(self):
-        return f'{self.id}, {self.last_name}, {self.first_name}, {self.address}, ' \
-               f'{self.all_emails_from_homepage}, {self.all_phones_from_homepage}'
+        return f'{self.id}, {self.last_name}, {self.first_name}' #, {self.address}, ' \
+               # f'{self.all_emails_from_homepage}, {self.all_phones_from_homepage}'
 
     def id_or_max(self):
         if self.id:

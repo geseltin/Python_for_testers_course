@@ -33,6 +33,16 @@ class OrmFixture:
         groups = Set(lambda: OrmFixture.ORMGroup, table="address_in_groups",
                      column="group_id", reverse="contacts", lazy=True)
 
+    # class ORMAddressInGroups(db.Entity):
+    #     # _table_ = 'address_in_groups'
+    #     # guid = PrimaryKey(int, auto=True)
+    #     contact_id = Required(lambda:OrmFixture.ORMContact, reverse='id')
+    #     group_id = Required(lambda:OrmFixture.ORMGroup)
+    #     PrimaryKey(contact_id, group_id)
+
+
+
+
 
 
 

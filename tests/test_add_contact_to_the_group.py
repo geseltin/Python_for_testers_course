@@ -12,8 +12,8 @@ def test_add_contact_to_the_group(app, db, orm, data_contacts, data_groups):
 
     # Предусловия, проверяем наличие хотя бы одной группы и контакта
     group = data_groups
+    contact = data_contacts
     if app.contact.count() == 0:
-        contact = data_contacts
         app.contact.add_new(contact)
     if app.group.count() == 0:
         app.group.create(group)
@@ -28,8 +28,12 @@ def test_add_contact_to_the_group(app, db, orm, data_contacts, data_groups):
         group_list = orm.get_group_list()
         group_for_test = get_not_full_group(group_list)
 
-    contact_for_test = random.choice(orm.get_contacts_not_in_group(group_for_test))
-
+    contacts_for_test = orm.get_contacts_not_in_group(group_for_test)
+    if contacts_for_test is None:
+        app.contact.add_new(contact)
+        contact_for_test = orm.get_contacts_not_in_group(group_for_test)
+    else:
+        contact_for_test = random.choice(contacts_for_test)
 
     # Шаги
     app.contact.add_contact_to_the_group(contact_for_test, group_for_test)
