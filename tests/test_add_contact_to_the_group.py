@@ -29,9 +29,9 @@ def test_add_contact_to_the_group(app, db, orm, data_contacts, data_groups):
         group_for_test = get_not_full_group(group_list)
 
     contacts_for_test = orm.get_contacts_not_in_group(group_for_test)
-    if contacts_for_test is None:
+    if contacts_for_test == []:
         app.contact.add_new(contact)
-        contact_for_test = orm.get_contacts_not_in_group(group_for_test)
+        contact_for_test = orm.get_contacts_not_in_group(group_for_test)[0]
     else:
         contact_for_test = random.choice(contacts_for_test)
 
