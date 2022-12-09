@@ -80,7 +80,7 @@ class GroupHelper:
         self.return_to_groups_page()
         self.group_cache = None
 
-    def modify_random_group(self, group):
+    def modify_group_by_id(self, group):
         wd = self.app.wd
         self.open_groups_page()
         self.select_group_by_id(group.id)
