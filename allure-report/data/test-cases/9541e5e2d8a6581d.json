@@ -1,0 +1,183 @@
+{
+  "uid" : "9541e5e2d8a6581d",
+  "name" : "test_remove_contact_from_group[None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp-None, ContactMZUTRFFT, ContactEKCLGUYV]",
+  "fullName" : "tests.test_remove_contact_from_group#test_remove_contact_from_group",
+  "historyId" : "a216ba97cbb76f1c5b503e90e1e1e397",
+  "time" : {
+    "start" : 1670822161569,
+    "stop" : 1670822161572,
+    "duration" : 3
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'included_in_groups'",
+  "statusTrace" : "app = <fixture.application.Application object at 0x0000028B2A2722E0>\ndb = <fixture.db.DbFixture object at 0x0000028B2A159A60>, orm = <fixture.orm.OrmFixture object at 0x0000028B2A159880>\ndata_groups = 20: nameFXi, headerRCUKRk2xjiSC, footer5w QVp, data_contacts = 3, ContactMZUTRFFT, ContactEKCLGUYV\n\n    def test_remove_contact_from_group(app, db, orm, data_groups, data_contacts):\n    \n    \n        with allure.step('Проверить наличие контакта в группе, при отсутствии создать'):\n            if db.get_adress_in_groups_rows_count() == 0:\n                group = data_groups\n                contact = data_contacts\n                app.group.create(group)\n                group = random.choice(orm.get_group_list())\n                app.contact.add_new(contact)\n                contact = random.choice(orm.get_contact_list())\n                app.contact.add_contact_to_the_group(contact=contact, group=group)\n    \n        with allure.step('Удалить контакт из группы'):\n            contact_list = orm.get_contact_list()\n            contact_for_test = app.contact.get_contact_included_in_group_from_list(contact_list)\n>           group = random.choice(contact_for_test.included_in_groups)\nE           AttributeError: 'NoneType' object has no attribute 'included_in_groups'\n\ntests\\test_remove_contact_from_group.py:22: AttributeError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "app",
+    "time" : {
+      "start" : 1670822161546,
+      "stop" : 1670822161569,
+      "duration" : 23
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "orm",
+    "time" : {
+      "start" : 1670822152604,
+      "stop" : 1670822152614,
+      "duration" : 10
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1670822152599,
+      "stop" : 1670822152604,
+      "duration" : 5
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "stop",
+    "time" : {
+      "start" : 1670822152614,
+      "stop" : 1670822152614,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'included_in_groups'",
+    "statusTrace" : "app = <fixture.application.Application object at 0x0000028B2A2722E0>\ndb = <fixture.db.DbFixture object at 0x0000028B2A159A60>, orm = <fixture.orm.OrmFixture object at 0x0000028B2A159880>\ndata_groups = 20: nameFXi, headerRCUKRk2xjiSC, footer5w QVp, data_contacts = 3, ContactMZUTRFFT, ContactEKCLGUYV\n\n    def test_remove_contact_from_group(app, db, orm, data_groups, data_contacts):\n    \n    \n        with allure.step('Проверить наличие контакта в группе, при отсутствии создать'):\n            if db.get_adress_in_groups_rows_count() == 0:\n                group = data_groups\n                contact = data_contacts\n                app.group.create(group)\n                group = random.choice(orm.get_group_list())\n                app.contact.add_new(contact)\n                contact = random.choice(orm.get_contact_list())\n                app.contact.add_contact_to_the_group(contact=contact, group=group)\n    \n        with allure.step('Удалить контакт из группы'):\n            contact_list = orm.get_contact_list()\n            contact_for_test = app.contact.get_contact_included_in_group_from_list(contact_list)\n>           group = random.choice(contact_for_test.included_in_groups)\nE           AttributeError: 'NoneType' object has no attribute 'included_in_groups'\n\ntests\\test_remove_contact_from_group.py:22: AttributeError",
+    "steps" : [ {
+      "name" : "Проверить наличие контакта в группе, при отсутствии создать",
+      "time" : {
+        "start" : 1670822161570,
+        "stop" : 1670822161570,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Удалить контакт из группы",
+      "time" : {
+        "start" : 1670822161570,
+        "stop" : 1670822161572,
+        "duration" : 2
+      },
+      "status" : "broken",
+      "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'included_in_groups'\n",
+      "statusTrace" : "  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\tests\\test_remove_contact_from_group.py\", line 22, in test_remove_contact_from_group\n    group = random.choice(contact_for_test.included_in_groups)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "stop::finalizer",
+    "time" : {
+      "start" : 1670822161576,
+      "stop" : 1670822163720,
+      "duration" : 2144
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_remove_contact_from_group"
+  }, {
+    "name" : "host",
+    "value" : "WIN-79MG0BBV95D"
+  }, {
+    "name" : "thread",
+    "value" : "8200-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_remove_contact_from_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data_contacts",
+    "value" : "3, ContactMZUTRFFT, ContactEKCLGUYV"
+  }, {
+    "name" : "data_groups",
+    "value" : "20: nameFXi, headerRCUKRk2xjiSC, footer5w QVp"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "9541e5e2d8a6581d.json",
+  "parameterValues" : [ "3, ContactMZUTRFFT, ContactEKCLGUYV", "20: nameFXi, headerRCUKRk2xjiSC, footer5w QVp" ]
+}

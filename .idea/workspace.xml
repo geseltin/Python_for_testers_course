@@ -4,16 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fa407f2-7878-4aad-9296-c8a8b4136390" name="Changes" comment="Добавлена загрузка данных из конфигурационного файла">
-      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/contacts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/groups.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generator/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generator/contact.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generator/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_add_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_add_group.py" afterDir="false" />
+    <list default="true" id="8fa407f2-7878-4aad-9296-c8a8b4136390" name="Changes" comment="Добавлен allure отчёт">
+      <change afterPath="$PROJECT_DIR$/allure-report/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/behaviors.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/behaviors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/categories.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/categories.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/packages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/suites.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/suites.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/1af74172350ec63b.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/1b9d7f10bc4aef96.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/3826aa3fa0a63fb8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/4ac93001c040f440.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/72c435b0f5c9b65c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/8b263d7faba7eb60.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/8efd755f9117ae97.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/9541e5e2d8a6581d.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/96a7324c58c95305.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/a1f15490934c368e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/a4909dbfb3374769.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/test-cases/ef6257271775d3b4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/data/timeline.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/export/influxDbData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/export/mail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/export/prometheusData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/history/categories-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/history/duration-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/history/history-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/history/history.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/history/retry-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/plugins/behaviors/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/plugins/packages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/plugins/screen-diff/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/plugins/screen-diff/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/behaviors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/categories-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/categories.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/duration-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/duration.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/environment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/executors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/history-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/retry-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/severity.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/status-chart.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/suites.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-report/widgets/summary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_add_contact_to_the_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_add_contact_to_the_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_check_contact_data_on_home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_check_contact_data_on_home_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_db_matches_ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_phones.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_remove_contact_from_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_remove_contact_from_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,60 +107,46 @@
       <recent name="C:\Users\Alexander\PycharmProjects\Python_for_testers_course\fixture" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.group">
-    <configuration name="contact" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python_for_testers_course" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generator" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generator/contact.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="group" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python_for_testers_course" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generator" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generator/group.py" />
-      <option name="PARAMETERS" value="-f data/groups.json" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_add_contact.test_add_contact" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for bdd.group_scenarios.test_delete_random_group">
+    <configuration name="Python tests for bdd.group_scenarios.test_add_new_group" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Python_for_testers_course" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_add_contact.test_add_contact&quot;" />
+      <option name="_new_target" value="&quot;bdd.group_scenarios.test_add_new_group&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for bdd.group_scenarios.test_delete_random_group" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python_for_testers_course" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;bdd.group_scenarios.test_delete_random_group&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for bdd.group_scenarios.test_modify_random_group" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python_for_testers_course" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;bdd.group_scenarios.test_modify_random_group&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -131,34 +164,34 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_add_group.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in group_scenarios.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Python_for_testers_course" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_add_group.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/bdd/group_scenarios.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.contact" />
-      <item itemvalue="Python.group" />
-      <item itemvalue="Python tests.Python tests in test_add_group.py" />
-      <item itemvalue="Python tests.Python tests for test_add_contact.test_add_contact" />
+      <item itemvalue="Python tests.Python tests for bdd.group_scenarios.test_add_new_group" />
+      <item itemvalue="Python tests.Python tests for bdd.group_scenarios.test_delete_random_group" />
+      <item itemvalue="Python tests.Python tests for bdd.group_scenarios.test_modify_random_group" />
+      <item itemvalue="Python tests.Python tests in group_scenarios.py" />
       <item itemvalue="Python tests.Python tests for test_add_group.test_add_group" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.group" />
-        <item itemvalue="Python tests.Python tests for test_add_contact.test_add_contact" />
+        <item itemvalue="Python tests.Python tests for bdd.group_scenarios.test_delete_random_group" />
+        <item itemvalue="Python tests.Python tests in group_scenarios.py" />
+        <item itemvalue="Python tests.Python tests for bdd.group_scenarios.test_modify_random_group" />
+        <item itemvalue="Python tests.Python tests for bdd.group_scenarios.test_add_new_group" />
         <item itemvalue="Python tests.Python tests for test_add_group.test_add_group" />
-        <item itemvalue="Python.contact" />
-        <item itemvalue="Python tests.Python tests in test_add_group.py" />
       </list>
     </recent_temporary>
   </component>
@@ -374,8 +407,151 @@
       <option name="project" value="LOCAL" />
       <updated>1668182185816</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Генераторы выделены в отдельные модули">
+      <created>1668247370815</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1668247370815</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Рефакторинг для использования json объектов с тестовыми данными">
+      <created>1668248939674</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1668248939674</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Добавлены helpers для работы с БД&#10;Рефакторинг тестов по созданию, изменению, удалению групп и контактов на получение списков из БД">
+      <created>1668850928778</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1668850928778</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Изменен тест сравнения данных на форме редактирования и главной странице - теперь просиходит сравнение данных всех контактов на главное сранице и БД">
+      <created>1668855134051</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1668855134051</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Добавлены тесты на добавление и удаление контакта в группу&#10;+ соответствующие методы">
+      <created>1668881483277</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1668881483277</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Рефакторинг теста на сравнение контактов на главной странице">
+      <created>1668922936944</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1668922936945</updated>
+    </task>
+    <task id="LOCAL-00036" summary="фикс">
+      <created>1668923054034</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1668923054034</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Исправлена фикстура в тесте добавления контакта в группу">
+      <created>1669012869802</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1669012869802</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Исправлеено предусловие для теста по удалению контакта из группы">
+      <created>1669047948517</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1669047948517</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Исправления по тесту добавления контакта в группу">
+      <created>1669223661187</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1669223661187</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Добавлены проверки случаев в тест добавления контакта в группу">
+      <created>1669268373144</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1669268373144</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Правки теста по добавлению контакта в группу">
+      <created>1669444386616</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1669444386616</updated>
+    </task>
+    <task id="LOCAL-00042" summary="BDD тест">
+      <created>1670567948971</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1670567948971</updated>
+    </task>
+    <task id="LOCAL-00043" summary="BDD тест">
+      <created>1670567959929</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1670567959929</updated>
+    </task>
+    <task id="LOCAL-00044" summary="добавлен файл зависимостей&#10;исправлен тест bdd">
+      <created>1670602448125</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1670602448125</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Добавлена версия селениума в зависимости">
+      <created>1670603026129</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1670603026129</updated>
+    </task>
+    <task id="LOCAL-00046" summary="фикс версии селениума">
+      <created>1670603319084</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1670603319084</updated>
+    </task>
+    <task id="LOCAL-00047" summary="скриншоты задач и отчетов из дженкинса">
+      <created>1670606579255</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1670606579256</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Добавлены тесты bdd на изменение и удаление групп">
+      <created>1670614080887</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1670614080887</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Добавлены шаги для allure отчёта">
+      <created>1670746739269</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1670746739269</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.feature" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -389,55 +565,85 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавлено генерирование данных для объекта Group" />
-    <MESSAGE value="Добавлен тест по добавлению контакта и класс Contact" />
-    <MESSAGE value="Добавлен модуль application&#10;Тесты переведены на использование фреймворка pytest" />
-    <MESSAGE value="Декомпозированы классы&#10;Добавлен класс SessionHelper" />
-    <MESSAGE value="Добавлен класс groupHelper &#10;Небольшие правки" />
-    <MESSAGE value="Добавлен класс Factory&#10;Рефакторинг с учетом нового класса" />
-    <MESSAGE value="Фикстура вынесена в модуль conftest" />
-    <MESSAGE value="Добавлены тесты на удаление и редактирование контактов&#10;Добавлен тест на редактирование группы&#10;Добавлены соответствующие методы" />
-    <MESSAGE value="Удалён класс factory и проведен рефакторинг" />
-    <MESSAGE value="Изменены тесты на редактирование и удаление контакта (теперь изменяется и удаляется первый контакт в списке)&#10;В тестовые методы добавлены переходы на главные страницы" />
-    <MESSAGE value="Удален метод edit_contact как неактуальный" />
-    <MESSAGE value="Заполнение карточки контакта вынесено в отдельную функцию" />
-    <MESSAGE value="Добавлены проверки валидности фикстуры&#10;Добавлена проверка текущего состояния сессии" />
-    <MESSAGE value="Добавлены проверки предусловий на наличие объекта для тестов Group и Contact" />
-    <MESSAGE value="Добавлены проверки на длинну списков в тесты для групп" />
-    <MESSAGE value="Добавлены проверки для тестов контактов" />
-    <MESSAGE value="Испралвена проверка списков" />
-    <MESSAGE value="Исправлены проверки на сравнение списков" />
-    <MESSAGE value="Тесты изменены на случайное удаление/изменение групп/контактов" />
-    <MESSAGE value="Исправлен тест добавления контакта (генерация входных данных)" />
     <MESSAGE value="Добавлено кэширование и методы для работы с группами/контактами по индексу" />
     <MESSAGE value="Добавлен тест на сравнение данных контакта на главной странице и странице редактирования и дополнительные для этого методы" />
     <MESSAGE value="Добавлена параметризация для теста на создание контакта" />
     <MESSAGE value="Добавлена параметризация из консоли на запуск в различных браузерах, и различных ссылках" />
     <MESSAGE value="Добавлена загрузка данных из конфигурационного файла" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена загрузка данных из конфигурационного файла" />
+    <MESSAGE value="Генераторы выделены в отдельные модули" />
+    <MESSAGE value="Рефакторинг для использования json объектов с тестовыми данными" />
+    <MESSAGE value="Добавлены helpers для работы с БД&#10;Рефакторинг тестов по созданию, изменению, удалению групп и контактов на получение списков из БД" />
+    <MESSAGE value="Изменен тест сравнения данных на форме редактирования и главной странице - теперь просиходит сравнение данных всех контактов на главное сранице и БД" />
+    <MESSAGE value="Добавлены тесты на добавление и удаление контакта в группу&#10;+ соответствующие методы" />
+    <MESSAGE value="Рефакторинг теста на сравнение контактов на главной странице" />
+    <MESSAGE value="фикс" />
+    <MESSAGE value="Исправлена фикстура в тесте добавления контакта в группу" />
+    <MESSAGE value="Исправлеено предусловие для теста по удалению контакта из группы" />
+    <MESSAGE value="Исправления по тесту добавления контакта в группу" />
+    <MESSAGE value="Добавлены проверки случаев в тест добавления контакта в группу" />
+    <MESSAGE value="Правки теста по добавлению контакта в группу" />
+    <MESSAGE value="BDD тест" />
+    <MESSAGE value="добавлен файл зависимостей&#10;исправлен тест bdd" />
+    <MESSAGE value="Добавлена версия селениума в зависимости" />
+    <MESSAGE value="фикс версии селениума" />
+    <MESSAGE value="скриншоты задач и отчетов из дженкинса" />
+    <MESSAGE value="Добавлены тесты bdd на изменение и удаление групп" />
+    <MESSAGE value="Добавлены шаги для allure отчёта" />
+    <MESSAGE value="Добавлен allure отчёт" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен allure отчёт" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_delete_random_contact.py</url>
-          <line>6</line>
+          <line>7</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_modify_random_contact.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_modify_random_contact.py</url>
-          <line>14</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_check_random_contact_data.py</url>
+          <url>file://$PROJECT_DIR$/tests/test_modify_random_group.py</url>
           <line>6</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_modify_random_group.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_modify_random_contact.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_delete_random_contact.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_remove_contact_from_group.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_add_contact_to_the_group.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/bdd/group_steps.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/bdd/group_steps.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/bdd/group_steps.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

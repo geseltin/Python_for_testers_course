@@ -1,0 +1,121 @@
+[ {
+  "uid" : "1b9d7f10bc4aef96",
+  "name" : "test_delete_random_contact",
+  "time" : {
+    "start" : 1670822158426,
+    "stop" : 1670822158774,
+    "duration" : 348
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "72c435b0f5c9b65c",
+  "name" : "test_add_group[None: nameG r9v, headersOD xcs, footer9fyK3MJ3]",
+  "time" : {
+    "start" : 1670822156208,
+    "stop" : 1670822156600,
+    "duration" : 392
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a1f15490934c368e",
+  "name" : "test_modify_random_contact[None, ContactMZUTRFFT, ContactEKCLGUYV]",
+  "time" : {
+    "start" : 1670822159141,
+    "stop" : 1670822160885,
+    "duration" : 1744
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4ac93001c040f440",
+  "name" : "test_add_contact[None, ContactJORQHZPH, ContactFTKIIDZG]",
+  "time" : {
+    "start" : 1670822153997,
+    "stop" : 1670822155600,
+    "duration" : 1603
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8efd755f9117ae97",
+  "name" : "test_add_group[None: namek , headerhg5Czf4Yu YhineB, footerwPm1]",
+  "time" : {
+    "start" : 1670822157646,
+    "stop" : 1670822158115,
+    "duration" : 469
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9541e5e2d8a6581d",
+  "name" : "test_remove_contact_from_group[None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp-None, ContactMZUTRFFT, ContactEKCLGUYV]",
+  "time" : {
+    "start" : 1670822161569,
+    "stop" : 1670822161572,
+    "duration" : 3
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "3826aa3fa0a63fb8",
+  "name" : "test_add_contact_to_the_group[None, ContactMZUTRFFT, ContactEKCLGUYV-None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp]",
+  "time" : {
+    "start" : 1670822155634,
+    "stop" : 1670822155743,
+    "duration" : 109
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "8b263d7faba7eb60",
+  "name" : "test_modify_random_group[None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp]",
+  "time" : {
+    "start" : 1670822160915,
+    "stop" : 1670822161542,
+    "duration" : 627
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ef6257271775d3b4",
+  "name" : "test_add_group[None: nameYKha 4, headercRdPzJEhBSbHfX, footer5Ur  0W]",
+  "time" : {
+    "start" : 1670822156627,
+    "stop" : 1670822157123,
+    "duration" : 496
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a4909dbfb3374769",
+  "name" : "test_delete_random_group",
+  "time" : {
+    "start" : 1670822158804,
+    "stop" : 1670822159114,
+    "duration" : 310
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1af74172350ec63b",
+  "name" : "test_check_contact_data_on_home_page_and_db",
+  "time" : {
+    "start" : 1670822158143,
+    "stop" : 1670822158399,
+    "duration" : 256
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "96a7324c58c95305",
+  "name" : "test_add_group[None: namepCw, headerlHL5XHAt I, footerYeoU  4Jx0MB41zk]",
+  "time" : {
+    "start" : 1670822157150,
+    "stop" : 1670822157618,
+    "duration" : 468
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

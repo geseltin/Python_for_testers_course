@@ -1,0 +1,183 @@
+{
+  "uid" : "3826aa3fa0a63fb8",
+  "name" : "test_add_contact_to_the_group[None, ContactMZUTRFFT, ContactEKCLGUYV-None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp]",
+  "fullName" : "tests.test_add_contact_to_the_group#test_add_contact_to_the_group",
+  "historyId" : "d45127107bb52143a82ad5755909d044",
+  "time" : {
+    "start" : 1670822155634,
+    "stop" : 1670822155743,
+    "duration" : 109
+  },
+  "status" : "broken",
+  "statusMessage" : "pony.orm.core.UnrepeatableReadError: Phantom object ORMContact[4] disappeared",
+  "statusTrace" : "app = <fixture.application.Application object at 0x0000028B2A2722E0>\ndb = <fixture.db.DbFixture object at 0x0000028B2A159A60>, orm = <fixture.orm.OrmFixture object at 0x0000028B2A159880>\ndata_contacts = None, ContactMZUTRFFT, ContactEKCLGUYV, data_groups = None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp\n\n    def test_add_contact_to_the_group(app, db, orm, data_contacts, data_groups):\n    \n        def get_not_full_group(group_list):\n            for group in group_list:\n                contacts_not_in_group = orm.get_contacts_in_group(group)\n                if contacts_not_in_group is not None:\n                    return group\n    \n        # Предусловия, проверяем наличие хотя бы одной группы и контакта\n        with allure.step('Проверяем наличие хотя бы одной группы и контакта'):\n            group = data_groups\n            contact = data_contacts\n            if app.contact.count() == 0:\n                app.contact.add_new(contact)\n            if app.group.count() == 0:\n                app.group.create(group)\n    \n    \n        group_list = orm.get_group_list()\n        # Ищем неполную группу, если такой нет - создаём\n        with allure.step('Ищем неполную группу, если такой нет - создаём'):\n>           group_for_test = get_not_full_group(group_list)\n\ntests\\test_add_contact_to_the_group.py:27: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ntests\\test_add_contact_to_the_group.py:10: in get_not_full_group\n    contacts_not_in_group = orm.get_contacts_in_group(group)\n<string>:2: in get_contacts_in_group\n    ???\nenv\\lib\\site-packages\\pony\\orm\\core.py:538: in new_func\n    reraise(exc_type, exc, tb)\nenv\\lib\\site-packages\\pony\\utils\\utils.py:88: in reraise\n    try: raise exc.with_traceback(tb)\nenv\\lib\\site-packages\\pony\\orm\\core.py:519: in new_func\n    result = func(*args, **kwargs)\nfixture\\orm.py:80: in get_contacts_in_group\n    return self.convert_contacts_to_model(orm_group.contacts)\nfixture\\orm.py:67: in convert_contacts_to_model\n    return list(map(convert, contacts))\nfixture\\orm.py:63: in convert\n    return Contact(id=str(contact.id), first_name=contact.first_name, last_name=contact.last_name,\nenv\\lib\\site-packages\\pony\\orm\\core.py:2278: in __get__\n    value = attr.get(obj)\nenv\\lib\\site-packages\\pony\\orm\\core.py:2288: in get\n    val = vals[attr] if attr in vals else attr.load(obj)\nenv\\lib\\site-packages\\pony\\orm\\core.py:2272: in load\n    else: obj._load_()\nenv\\lib\\site-packages\\pony\\orm\\core.py:4827: in _load_\n    if obj not in objects: throw(UnrepeatableReadError,\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nexc_type = <class 'pony.orm.core.UnrepeatableReadError'>, args = ('Phantom object ORMContact[4] disappeared',)\nkwargs = {}\n\n    def throw(exc_type, *args, **kwargs):\n        if isinstance(exc_type, Exception):\n            assert not args and not kwargs\n            exc = exc_type\n        else: exc = exc_type(*args, **kwargs)\n        exc.__cause__ = None\n        try:\n            if not (pony.MODE == 'INTERACTIVE' and options.CUT_TRACEBACK):\n>               raise exc\nE               pony.orm.core.UnrepeatableReadError: Phantom object ORMContact[4] disappeared\n\nenv\\lib\\site-packages\\pony\\utils\\utils.py:99: UnrepeatableReadError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "app",
+    "time" : {
+      "start" : 1670822155604,
+      "stop" : 1670822155634,
+      "duration" : 30
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "orm",
+    "time" : {
+      "start" : 1670822152604,
+      "stop" : 1670822152614,
+      "duration" : 10
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1670822152599,
+      "stop" : 1670822152604,
+      "duration" : 5
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "stop",
+    "time" : {
+      "start" : 1670822152614,
+      "stop" : 1670822152614,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "pony.orm.core.UnrepeatableReadError: Phantom object ORMContact[4] disappeared",
+    "statusTrace" : "app = <fixture.application.Application object at 0x0000028B2A2722E0>\ndb = <fixture.db.DbFixture object at 0x0000028B2A159A60>, orm = <fixture.orm.OrmFixture object at 0x0000028B2A159880>\ndata_contacts = None, ContactMZUTRFFT, ContactEKCLGUYV, data_groups = None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp\n\n    def test_add_contact_to_the_group(app, db, orm, data_contacts, data_groups):\n    \n        def get_not_full_group(group_list):\n            for group in group_list:\n                contacts_not_in_group = orm.get_contacts_in_group(group)\n                if contacts_not_in_group is not None:\n                    return group\n    \n        # Предусловия, проверяем наличие хотя бы одной группы и контакта\n        with allure.step('Проверяем наличие хотя бы одной группы и контакта'):\n            group = data_groups\n            contact = data_contacts\n            if app.contact.count() == 0:\n                app.contact.add_new(contact)\n            if app.group.count() == 0:\n                app.group.create(group)\n    \n    \n        group_list = orm.get_group_list()\n        # Ищем неполную группу, если такой нет - создаём\n        with allure.step('Ищем неполную группу, если такой нет - создаём'):\n>           group_for_test = get_not_full_group(group_list)\n\ntests\\test_add_contact_to_the_group.py:27: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ntests\\test_add_contact_to_the_group.py:10: in get_not_full_group\n    contacts_not_in_group = orm.get_contacts_in_group(group)\n<string>:2: in get_contacts_in_group\n    ???\nenv\\lib\\site-packages\\pony\\orm\\core.py:538: in new_func\n    reraise(exc_type, exc, tb)\nenv\\lib\\site-packages\\pony\\utils\\utils.py:88: in reraise\n    try: raise exc.with_traceback(tb)\nenv\\lib\\site-packages\\pony\\orm\\core.py:519: in new_func\n    result = func(*args, **kwargs)\nfixture\\orm.py:80: in get_contacts_in_group\n    return self.convert_contacts_to_model(orm_group.contacts)\nfixture\\orm.py:67: in convert_contacts_to_model\n    return list(map(convert, contacts))\nfixture\\orm.py:63: in convert\n    return Contact(id=str(contact.id), first_name=contact.first_name, last_name=contact.last_name,\nenv\\lib\\site-packages\\pony\\orm\\core.py:2278: in __get__\n    value = attr.get(obj)\nenv\\lib\\site-packages\\pony\\orm\\core.py:2288: in get\n    val = vals[attr] if attr in vals else attr.load(obj)\nenv\\lib\\site-packages\\pony\\orm\\core.py:2272: in load\n    else: obj._load_()\nenv\\lib\\site-packages\\pony\\orm\\core.py:4827: in _load_\n    if obj not in objects: throw(UnrepeatableReadError,\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nexc_type = <class 'pony.orm.core.UnrepeatableReadError'>, args = ('Phantom object ORMContact[4] disappeared',)\nkwargs = {}\n\n    def throw(exc_type, *args, **kwargs):\n        if isinstance(exc_type, Exception):\n            assert not args and not kwargs\n            exc = exc_type\n        else: exc = exc_type(*args, **kwargs)\n        exc.__cause__ = None\n        try:\n            if not (pony.MODE == 'INTERACTIVE' and options.CUT_TRACEBACK):\n>               raise exc\nE               pony.orm.core.UnrepeatableReadError: Phantom object ORMContact[4] disappeared\n\nenv\\lib\\site-packages\\pony\\utils\\utils.py:99: UnrepeatableReadError",
+    "steps" : [ {
+      "name" : "Проверяем наличие хотя бы одной группы и контакта",
+      "time" : {
+        "start" : 1670822155634,
+        "stop" : 1670822155734,
+        "duration" : 100
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Ищем неполную группу, если такой нет - создаём",
+      "time" : {
+        "start" : 1670822155737,
+        "stop" : 1670822155739,
+        "duration" : 2
+      },
+      "status" : "broken",
+      "statusMessage" : "pony.orm.core.UnrepeatableReadError: Phantom object ORMContact[4] disappeared\n",
+      "statusTrace" : "  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\tests\\test_add_contact_to_the_group.py\", line 27, in test_add_contact_to_the_group\n    group_for_test = get_not_full_group(group_list)\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\tests\\test_add_contact_to_the_group.py\", line 10, in get_not_full_group\n    contacts_not_in_group = orm.get_contacts_in_group(group)\n  File \"<string>\", line 2, in get_contacts_in_group\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\env\\lib\\site-packages\\pony\\orm\\core.py\", line 538, in new_func\n    reraise(exc_type, exc, tb)\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\env\\lib\\site-packages\\pony\\utils\\utils.py\", line 88, in reraise\n    try: raise exc.with_traceback(tb)\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\env\\lib\\site-packages\\pony\\orm\\core.py\", line 519, in new_func\n    result = func(*args, **kwargs)\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\fixture\\orm.py\", line 80, in get_contacts_in_group\n    return self.convert_contacts_to_model(orm_group.contacts)\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\fixture\\orm.py\", line 67, in convert_contacts_to_model\n    return list(map(convert, contacts))\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\fixture\\orm.py\", line 63, in convert\n    return Contact(id=str(contact.id), first_name=contact.first_name, last_name=contact.last_name,\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\env\\lib\\site-packages\\pony\\orm\\core.py\", line 2278, in __get__\n    value = attr.get(obj)\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\env\\lib\\site-packages\\pony\\orm\\core.py\", line 2288, in get\n    val = vals[attr] if attr in vals else attr.load(obj)\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\env\\lib\\site-packages\\pony\\orm\\core.py\", line 2272, in load\n    else: obj._load_()\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\env\\lib\\site-packages\\pony\\orm\\core.py\", line 4827, in _load_\n    if obj not in objects: throw(UnrepeatableReadError,\n  File \"C:\\Users\\Alexander\\PycharmProjects\\Python_for_testers_course\\env\\lib\\site-packages\\pony\\utils\\utils.py\", line 99, in throw\n    raise exc\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "stop::finalizer",
+    "time" : {
+      "start" : 1670822161576,
+      "stop" : 1670822163720,
+      "duration" : 2144
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_add_contact_to_the_group"
+  }, {
+    "name" : "host",
+    "value" : "WIN-79MG0BBV95D"
+  }, {
+    "name" : "thread",
+    "value" : "8200-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_add_contact_to_the_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data_contacts",
+    "value" : "None, ContactMZUTRFFT, ContactEKCLGUYV"
+  }, {
+    "name" : "data_groups",
+    "value" : "None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "3826aa3fa0a63fb8.json",
+  "parameterValues" : [ "None, ContactMZUTRFFT, ContactEKCLGUYV", "None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp" ]
+}

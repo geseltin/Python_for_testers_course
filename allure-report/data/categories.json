@@ -1,0 +1,41 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "pony.orm.core.UnrepeatableReadError: Phantom object ORMContact[4] disappeared",
+      "children" : [ {
+        "name" : "test_add_contact_to_the_group[None, ContactMZUTRFFT, ContactEKCLGUYV-None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp]",
+        "uid" : "3826aa3fa0a63fb8",
+        "parentUid" : "92f0813f2449815f9ccab09dec1e53c9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1670822155634,
+          "stop" : 1670822155743,
+          "duration" : 109
+        },
+        "flaky" : false,
+        "parameters" : [ "None, ContactMZUTRFFT, ContactEKCLGUYV", "None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp" ]
+      } ],
+      "uid" : "92f0813f2449815f9ccab09dec1e53c9"
+    }, {
+      "name" : "AttributeError: 'NoneType' object has no attribute 'included_in_groups'",
+      "children" : [ {
+        "name" : "test_remove_contact_from_group[None: nameFXi, headerRCUKRk2xjiSC, footer5w QVp-None, ContactMZUTRFFT, ContactEKCLGUYV]",
+        "uid" : "9541e5e2d8a6581d",
+        "parentUid" : "5663e404d89b70246ed4d5700ec132ff",
+        "status" : "broken",
+        "time" : {
+          "start" : 1670822161569,
+          "stop" : 1670822161572,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "parameters" : [ "3, ContactMZUTRFFT, ContactEKCLGUYV", "20: nameFXi, headerRCUKRk2xjiSC, footer5w QVp" ]
+      } ],
+      "uid" : "5663e404d89b70246ed4d5700ec132ff"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}
